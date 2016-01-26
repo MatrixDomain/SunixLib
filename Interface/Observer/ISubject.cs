@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Sunix.Lib.Interfaces.Observer
+namespace Sunix.Lib.Interfaces
 {
     /// <summary>
     /// 观察者模式主题接口;

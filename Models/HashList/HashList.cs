@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using Sunix.Lib.Interfaces.Observer;
+using Sunix.Lib.Interfaces;
+using Sunix.Lib.Strings;
 
 
 //************************************************************************************
-//* 命名空间：sunix.lib.hashlist
-//* 版本号：  V1.0.0.0;
-//* 创建人：  枫叶天空  (孙伟航);
-//* QQ    ：  1569423066;
-//* 电子邮箱：1569423066@qq.com
-//* 创建时间：2014-06-14;
-//* 描述    : 功能强大的自定义集合，同时兼容list与hashtable的核心功能;
+//* 命名空间:Sunix.Lib.HashList
+//* 版本号:V1.0.0.0;
+//* 创建人:枫叶天空  (孙伟航);
+//* QQ:1569423066;
+//* 电子邮箱:1569423066@qq.com
+//* 创建时间:2014-06-14;
+//* 描述:功能强大的自定义集合，同时兼容list与hashtable的核心功能;
 //*************************************************************************************
-
-
-namespace Sunix.Lib.HashList
+namespace Sunix.Lib.Models
 {
 
     /// <summary>
@@ -28,6 +27,7 @@ namespace Sunix.Lib.HashList
         public Hashtable hash = new Hashtable();
         //泛型列表，用来进行有序数据处理;
         public List<T> list = new List<T>();
+
         //字符串格式化标志;
         //true 打印list;
         //false 打印hashTabel;
@@ -290,13 +290,13 @@ namespace Sunix.Lib.HashList
         /// 将列表转化成字符串;
         /// </summary>
         /// <returns></returns>
-        //public override string ToString()
-        //{
-        //    if (typeList)
-        //        return Json.toString(list);
-        //    else
-        //        return Json.toString(hash);
-        //}
+        public override string ToString()
+        {
+            if (typeList)
+                return Json.toString(list);
+            else
+                return Json.toString(hash);
+        }
 
         /// <summary>
         /// 获取list中包含的元素数;
