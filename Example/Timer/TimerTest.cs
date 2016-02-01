@@ -65,6 +65,5 @@ public class TimerTest : MonoBehaviour {
     {
         int result = 20 * (int)value.args;
         Debug.Log("do loop result:" + result);
-
     }
 }
